@@ -1,21 +1,21 @@
 [
   {
     "id": "1",
-    "img": "../public/image/profile/valentina-img-profile.jpg",
+    "img": "/image/profile/valentina-img-profile.jpg",
     "name": "Valentina",
     "lastname": "Zanisi",
     "phone": 3334445789
   },
   {
     "id": "2",
-    "img": "../public/image/profile/marco-img-profile.jpg",
+    "img": "/image/profile/marco-img-profile.jpg",
     "name": "Marco",
     "lastname": "Pippo",
     "phone": 3123674902
   },
   {
     "id": "3",
-    "img": "../public/image/profile/loredana-img-profile.jpg",
+    "img": "/image/profile/loredana-img-profile.jpg",
     "name": "Loredana",
     "lastname": "Missa",
     "phone": 3458372901

@@ -32,7 +32,7 @@ function App() {
   //  initalValue: data,
   // });
 
-  console.log(contacts);
+
   const [contactEdit, setContactEdit] = useState({} as IData);
   const [contactDelete, setContactDelete] = useState({} as IData);
   const [postModalOpen, setPostModalOpen] = useState<boolean>(false);

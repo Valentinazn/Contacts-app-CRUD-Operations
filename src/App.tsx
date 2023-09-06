@@ -9,8 +9,6 @@ import UserDefaultImg from "../src/assets/svg/userImg.svg";
 import { v4 as uuidv4 } from "uuid";
 import EditModal from "./Modals/EditModal";
 
-import useLocalstorage from "./hooks/useLocalstorage";
-
 import ModalDelete from "./Modals/DeleteModal";
 
 function App() {

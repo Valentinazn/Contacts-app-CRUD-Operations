@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+
 import AddButton from "./components/AddButton";
 import Contact from "./components/Contact";
 import { IData } from "./types/data.type";
@@ -10,17 +10,10 @@ import { v4 as uuidv4 } from "uuid";
 import EditModal from "./Modals/EditModal";
 
 import useLocalstorage from "./hooks/useLocalstorage";
-import { useMutation, useQuery } from "@tanstack/react-query";
+
 import ModalDelete from "./Modals/DeleteModal";
 
 function App() {
-  //  const { data } = useQuery(["contacts"], () => {
-  //  return axios
-  //  .get("../public/db.json")
-  //  .then((res) => res.data)
-  // .catch((err) => console.log(err));
-  //});
-
   const [data, setData] = useState<IData[]>([]);
 
   const getData = () => {
@@ -45,12 +38,6 @@ function App() {
   const [editModalOpen, setEditModalOpen] = useState<boolean>(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState<boolean>(false);
 
-  // POST
-
-  // const createNewContact = async (data: IData) => {
-  //   const { data: response } = await axios.post("../public/db.json", data);
-  //   return response;
-  // };
   const onPostSubmit = (
     e: any,
     name: string,
@@ -81,27 +68,6 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  // const { mutate } = useMutation(createNewContact, {
-  // onSuccess: () => {
-  // const message = "Operazione eseguita con successo!";
-  // alert(message);
-  // },
-  // onError: () => {
-  // alert("Ops! Qualcosa è andato storto");
-  // },
-  //});
-
-  //  const onPostSubmit = (name: string, lastname: string, phone: number) => {
-  //   const data: IData = {
-  //   id: uuidv4(),
-  //  img: UserDefaultImg,
-  //  name: name,
-  //  lastname: lastname,
-  //  phone: phone,
-  //  };
-  // mutate(setContact(contacts?.concat(data)));
-  // setPostModalOpen(false);
-  //};
   // PUT
 
   const onEdit = (

@@ -18,7 +18,7 @@ function App() {
 
   const getData = () => {
     return axios
-      .get("/db.json")
+      .get("../dist//db.json")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   };
@@ -56,7 +56,7 @@ function App() {
     };
 
     axios
-      .post("/db.json", data)
+      .post("../dist//db.json", data)
       .then((res) => {
         if (res.status === 200) {
           alert("operazione eseguita con successo");

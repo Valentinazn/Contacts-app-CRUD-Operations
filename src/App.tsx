@@ -14,12 +14,12 @@ import useLocalstorage from "./hooks/useLocalstorage";
 import ModalDelete from "./Modals/DeleteModal";
 
 function App() {
-  const [data, setData] = useState<IData[]>([]);
+  const [contacts, setContact] = useState<IData[]>([]);
 
   const getData = () => {
     return axios
       .get("/db.json")
-      .then((res) => setData(res.data))
+      .then((res) => setContact(res.data))
       .catch((err) => console.log(err));
   };
 
@@ -27,12 +27,12 @@ function App() {
     getData();
   }, []);
 
-  const [contacts, setContact] = useLocalstorage({
-    key: "key",
-    initalValue: data,
-  });
+  // const [contacts, setContact] = useLocalstorage({
+  //   key: "key",
+  //  initalValue: data,
+  // });
 
-  console.log(contacts, data);
+  console.log(contacts);
   const [contactEdit, setContactEdit] = useState({} as IData);
   const [contactDelete, setContactDelete] = useState({} as IData);
   const [postModalOpen, setPostModalOpen] = useState<boolean>(false);

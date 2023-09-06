@@ -18,7 +18,7 @@ function App() {
 
   const getData = () => {
     return axios
-      .get("db.json")
+      .get("/db.json")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   };
@@ -32,6 +32,7 @@ function App() {
     initalValue: data,
   });
 
+  console.log(contacts);
   const [contactEdit, setContactEdit] = useState({} as IData);
   const [contactDelete, setContactDelete] = useState({} as IData);
   const [postModalOpen, setPostModalOpen] = useState<boolean>(false);
@@ -55,7 +56,7 @@ function App() {
     };
 
     axios
-      .post("db.json", data)
+      .post("/db.json", data)
       .then((res) => {
         if (res.status === 200) {
           alert("operazione eseguita con successo");

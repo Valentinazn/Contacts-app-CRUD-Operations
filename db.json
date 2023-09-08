@@ -1,0 +1,11 @@
+{
+  "profile": [
+    {
+      "img": "/src/assets/svg/userImg.svg",
+      "name": "Mario",
+      "lastname": "Rossi",
+      "phone": "1234567871",
+      "id": "a4e35569-810c-43d1-b880-18c217af66bf"
+    }
+  ]
+}

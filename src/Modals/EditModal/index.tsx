@@ -41,6 +41,7 @@ const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
           onEditSubmit(
             e,
             data.id,
+            data.img,
             contactEditName,
             contactEditLastname,
             contactEditPhone.data

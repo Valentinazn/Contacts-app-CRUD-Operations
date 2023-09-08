@@ -1,16 +1,22 @@
-import { IData } from "../types/data.type";
+import { Profile } from "../types/data.type";
 
 export interface IPostModal {
-  onPostSubmit: (e: any, name: string, lastname: string, phone: number) => void;
+  onPostSubmit: (
+    e: React.FormEvent<HTMLFormElement>,
+    name: string,
+    lastname: string,
+    phone: number
+  ) => void;
   onClose: () => void;
 }
 
 export interface IEditModal {
   onClose: () => void;
-  data: IData;
+  data: Profile;
   onEditSubmit: (
-    e: any,
+    e: React.FormEvent<HTMLFormElement>,
     id: string,
+    img: string,
     name: string,
     lastname: string,
     phone: number

@@ -1,15 +1,20 @@
 import UpdateIcon from "../../assets/svg/UpdateIcon";
 import DeleteIcon from "../../assets/svg/DeleteIcon";
-import { IData } from "../../types/data.type";
+import { Contacts, Profile } from "../../types/data.type";
 
 interface IContact {
-  data: IData[];
+  data: Profile[];
 
   onDelete: (id: string) => void;
-  onEdit: (id: string, name: string, lastname: string, phone: number) => void;
+  onEdit: (
+    id: string,
+    img: string,
+    name: string,
+    lastname: string,
+    phone: number
+  ) => void;
 }
 const Contact = ({ data, onDelete, onEdit }: IContact) => {
-  //onDelete(i.id)
   return (
     <section className="w-full">
       {data.map((i) => {
@@ -39,7 +44,9 @@ const Contact = ({ data, onDelete, onEdit }: IContact) => {
                   fill={"#4169e1"}
                   width={20}
                   height={20}
-                  onClick={() => onEdit(i.id, i.name, i.lastname, i.phone)}
+                  onClick={() =>
+                    onEdit(i.id, i.img, i.name, i.lastname, i.phone)
+                  }
                 />
                 <DeleteIcon
                   className="hover:cursor-pointer hover:opacity-[0.6]"

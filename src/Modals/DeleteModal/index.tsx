@@ -1,14 +1,14 @@
 import AddButton from "../../components/AddButton";
 import SubmitButton from "../../components/SubmitButton";
-import { IData } from "../../types/data.type";
+import { Profile } from "../../types/data.type";
 import ModalContainer from "../ModalContainer";
 interface IModalDelete {
   title: string;
   confirmButtonText: string;
   exitButtonText: string;
   onClose: () => void;
-  onDeleteSubmit: (e: any, id: string) => void;
-  data: IData;
+  onDeleteSubmit: (e: React.FormEvent<HTMLFormElement>, id: string) => void;
+  data: Profile;
 }
 
 const ModalDelete = ({

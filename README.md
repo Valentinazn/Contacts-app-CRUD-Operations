@@ -3,12 +3,11 @@
 
 ## Welcome! 👋
 
-To practice CRUD operations, I wanted to create a Contacts app.
-
+With this project, I wanted to practice the four basic operations that every web appliaction should be able to perform: Create, Read, Update, Delete.
 
 ## The challenge 🦾 
 
-With this project, I wanted to practice the four basic operations that every web appliaction should be able to perform: Create, Read, Update, Delete.
+is to build a contact application.
 
 Users should be able to:
 

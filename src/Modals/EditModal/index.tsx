@@ -7,6 +7,7 @@ import { IEditModal } from "../Modal.type";
 
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
+import SubmitButton from "../../components/Buttons/SubmitButton";
 
 const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
   const [contactEditName, setContactEditName] = useState(data.name);
@@ -59,6 +60,7 @@ const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
           }}
           onContactPhone={onContactEditPhone}
         />
+        <SubmitButton textButton={"Modifica"} bgColor="bg-[#4169e1]" />
       </form>
     </ModalContainer>
   );

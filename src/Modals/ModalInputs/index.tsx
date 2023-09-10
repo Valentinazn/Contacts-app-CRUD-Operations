@@ -1,13 +1,11 @@
-import SubmitButton from "../../components/Buttons/SubmitButton";
-
 export interface IModalInputs {
   contactName: string;
   onContactName: (e: any) => void;
   contactLastname: string;
   onContactLastname: (e: any) => void;
   contactPhone: {
-    data: any;
-    err: any;
+    data: number;
+    err: string;
   };
   onContactPhone: (e: any) => void;
 }
@@ -25,6 +23,7 @@ const ModalInputs = ({
       <input
         name="name"
         type="text"
+        required
         className="focus:outline-none placeholder:text-xs placeholder:leading-[20px] placeholder:font-[400] placeholder:text-[#67727E] bg-transparent p-[5px]"
         value={contactName}
         onChange={(e) => onContactName(e)}
@@ -33,6 +32,7 @@ const ModalInputs = ({
       <input
         name="lastname"
         type="text"
+        required
         className="focus:outline-none placeholder:text-xs placeholder:leading-[20px] placeholder:font-[400] placeholder:text-[#67727E] bg-transparent p-[5px]"
         value={contactLastname}
         onChange={(e) => onContactLastname(e)}
@@ -52,7 +52,6 @@ const ModalInputs = ({
       <p className="text-[#ED6368] text-xs">
         {contactPhone.err ? `Err: Ci vogliono 10 caratteri numerici` : ""}
       </p>
-      <SubmitButton textButton={"Modifica"} bgColor="bg-[#4169e1]" />
     </>
   );
 };

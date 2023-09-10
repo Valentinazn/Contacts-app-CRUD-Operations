@@ -1,27 +1,30 @@
-# React + TypeScript + Vite
+# Contact App CRUD operations
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Welcome! 👋
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To practice CRUD operations, I wanted to create a Contacts app.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## The challenge 🦾 
 
-- Configure the top-level `parserOptions` property like this:
+With this project, I wanted to practice the four basic operations that every web appliaction should be able to perform: Create, Read, Update, Delete.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Users should be able to:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Creating a contact
+- Edit a contact
+- Delete a contact
+- See all contacts
+
+  
+## Build with 👷‍♀️
+
+- TailwindCss
+- Typescript
+- Vitejs
+- Custom hooks
+- Axios
+- ReactJs
+- CSS Grid
+

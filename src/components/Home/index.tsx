@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import axios from "axios";
 
-import UserDefaultImg from "../../../src/assets/svg/userImg.svg";
+import UserDefaultImg from "/image/profile/userImg.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useFetch } from "../../api";
 import { Profile } from "../../types/data.type";

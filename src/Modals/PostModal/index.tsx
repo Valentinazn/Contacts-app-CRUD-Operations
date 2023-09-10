@@ -6,6 +6,7 @@ import { IPostModal } from "../Modal.type";
 
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
+import SubmitButton from "../../components/Buttons/SubmitButton";
 
 const PostModal = ({ onClose, onPostSubmit }: IPostModal) => {
   const [contactPostName, setContactPostName] = useState<string>("");
@@ -55,6 +56,8 @@ const PostModal = ({ onClose, onPostSubmit }: IPostModal) => {
           }}
           onContactPhone={onContactPostPhone}
         />
+
+        <SubmitButton textButton={"Aggiungi"} bgColor="bg-[#4169e1]" />
       </form>
     </ModalContainer>
   );

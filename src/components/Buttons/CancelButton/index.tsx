@@ -1,12 +1,13 @@
 interface ISubmitButton {
   textButton: string;
+  onClick: () => void;
 }
 
-const CancelButton = ({ textButton }: ISubmitButton) => {
+const CancelButton = ({ textButton, onClick }: ISubmitButton) => {
   return (
     <button
-      type="submit"
-      className="justify-self-center bg-red-700 rounded-lg text-white font-bold hover:opacity-5 w-full py-[10px] px-[20px] leading-6  "
+      onClick={onClick}
+      className="justify-self-center bg-[#67727E] rounded-lg text-white font-bold hover:opacity-60 w-full py-[10px] px-[20px] leading-6  "
     >
       {textButton}
     </button>

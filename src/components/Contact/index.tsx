@@ -1,6 +1,6 @@
 import UpdateIcon from "../../assets/svg/UpdateIcon";
 import DeleteIcon from "../../assets/svg/DeleteIcon";
-import { Contacts, Profile } from "../../types/data.type";
+import { Profile } from "../../types/data.type";
 
 interface IContact {
   data: Profile[];
@@ -20,15 +20,13 @@ const Contact = ({ data, onDelete, onEdit }: IContact) => {
       {data.map((i) => {
         return (
           <div
-            className="border-b-[black] border-b-2 grid-cols-1 grid border-solid pb-[10px] mb-[20px]"
+            className="border-b-[#67727E] border-b-2 grid-cols-1 grid border-solid pb-[10px] mb-[20px]"
             key={i.id}
           >
             <div className="grid grid-cols-[50px_1fr_1fr] items-start text-left gap-[10px]">
               <img
-                width={50}
-                height={50}
                 src={i.img}
-                className="rounded-[50%] object-cover"
+                className="rounded-[50%] object-cover w-[50px] h-[50px]"
               />
               <div>
                 <h3 className="font-bold">
@@ -40,7 +38,7 @@ const Contact = ({ data, onDelete, onEdit }: IContact) => {
 
               <div className="flex justify-end gap-[10px]">
                 <UpdateIcon
-                  className="hover:cursor-pointer hover:opacity-[0.6]"
+                  className="hover:cursor-pointer hover:opacity-60"
                   fill={"#4169e1"}
                   width={20}
                   height={20}
@@ -49,7 +47,7 @@ const Contact = ({ data, onDelete, onEdit }: IContact) => {
                   }
                 />
                 <DeleteIcon
-                  className="hover:cursor-pointer hover:opacity-[0.6]"
+                  className="hover:cursor-pointer hover:opacity-60"
                   fill={"#ED6368"}
                   width={20}
                   height={20}

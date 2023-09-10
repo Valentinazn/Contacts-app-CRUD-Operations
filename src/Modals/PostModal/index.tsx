@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CloseIcon from "../../assets/svg/CloseIcon";
 
 import "../style.css";
@@ -7,28 +6,13 @@ import { IPostModal } from "../Modal.type";
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
 import SubmitButton from "../../components/Buttons/SubmitButton";
+import { useInput, useInputPhone } from "../../hooks/useInput";
 
 const PostModal = ({ onClose, onPostSubmit }: IPostModal) => {
-  const [contactPostName, setContactPostName] = useState<string>("");
-  const [contactPostLastname, setContactPostLastname] = useState<string>("");
-  const [contactPostPhone, setContactPostPhone] = useState({
-    data: 3334445555,
-    err: "",
-  });
+  const { inputValue, handleChange } = useInput({ name: "", lastname: "" });
+  const { inputValue: inputPhone, handleChange: handleChangePhone } =
+    useInputPhone({ phone: 3334445555, err: "" });
 
-  const onContactPostName = (e: any) => {
-    setContactPostName(e.target.value.trim());
-  };
-  const onContactPostLastname = (e: any) => {
-    setContactPostLastname(e.target.value.trim());
-  };
-
-  const onContactPostPhone = (e: any) => {
-    setContactPostPhone({
-      data: e.target.value.trim(),
-      err: e.target.validationMessage,
-    });
-  };
   return (
     <ModalContainer>
       <div className="form-close-icon">
@@ -39,22 +23,21 @@ const PostModal = ({ onClose, onPostSubmit }: IPostModal) => {
         onSubmit={(e) =>
           onPostSubmit(
             e,
-            contactPostName,
-            contactPostLastname,
-            contactPostPhone.data
+            inputValue.name,
+            inputValue.lastname,
+            inputPhone.phone
           )
         }
       >
         <ModalInputs
-          contactName={contactPostName}
-          onContactName={onContactPostName}
-          contactLastname={contactPostLastname}
-          onContactLastname={onContactPostLastname}
+          contactName={inputValue.name}
+          handleChangePhone={handleChangePhone}
+          contactLastname={inputValue.lastname}
+          handleChange={handleChange}
           contactPhone={{
-            data: contactPostPhone.data,
-            err: contactPostPhone.err,
+            data: inputPhone.phone,
+            err: inputPhone.err,
           }}
-          onContactPhone={onContactPostPhone}
         />
 
         <SubmitButton textButton={"Aggiungi"} bgColor="bg-[#4169e1]" />

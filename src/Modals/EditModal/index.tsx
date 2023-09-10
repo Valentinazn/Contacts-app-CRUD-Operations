@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CloseIcon from "../../assets/svg/CloseIcon";
 
 import "../style.css";
@@ -8,28 +7,15 @@ import { IEditModal } from "../Modal.type";
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
 import SubmitButton from "../../components/Buttons/SubmitButton";
+import { useInput, useInputPhone } from "../../hooks/useInput";
 
 const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
-  const [contactEditName, setContactEditName] = useState(data.name);
-  const [contactEditLastname, setContactEditLastname] = useState(data.lastname);
-  const [contactEditPhone, setContactEditPhone] = useState({
-    data: data.phone,
-    err: "",
+  const { inputValue, handleChange } = useInput({
+    name: data.name,
+    lastname: data.lastname,
   });
-
-  const onContactEditName = (e: any) => {
-    setContactEditName(e.target.value.trim());
-  };
-  const onContactEditLastName = (e: any) => {
-    setContactEditLastname(e.target.value.trim());
-  };
-
-  const onContactEditPhone = (e: any) => {
-    setContactEditPhone({
-      data: e.target.value.trim(),
-      err: e.target.validationMessage,
-    });
-  };
+  const { inputValue: inputPhone, handleChange: handleChangePhone } =
+    useInputPhone({ phone: data.phone, err: "" });
 
   return (
     <ModalContainer>
@@ -43,22 +29,21 @@ const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
             e,
             data.id,
             data.img,
-            contactEditName,
-            contactEditLastname,
-            contactEditPhone.data
+            inputValue.name,
+            inputValue.lastname,
+            inputPhone.phone
           )
         }
       >
         <ModalInputs
-          contactName={contactEditName}
-          onContactName={onContactEditName}
-          contactLastname={contactEditLastname}
-          onContactLastname={onContactEditLastName}
+          contactName={inputValue.name}
+          handleChangePhone={handleChangePhone}
+          contactLastname={inputValue.lastname}
+          handleChange={handleChange}
           contactPhone={{
-            data: contactEditPhone.data,
-            err: contactEditPhone.err,
+            data: inputPhone.phone,
+            err: inputPhone.err,
           }}
-          onContactPhone={onContactEditPhone}
         />
         <SubmitButton textButton={"Modifica"} bgColor="bg-[#4169e1]" />
       </form>

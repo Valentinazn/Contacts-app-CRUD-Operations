@@ -1,41 +1,41 @@
 export interface IModalInputs {
   contactName: string;
-  onContactName: (e: any) => void;
+  handleChangePhone: (e: any) => void;
   contactLastname: string;
-  onContactLastname: (e: any) => void;
+  handleChange: (e: any) => void;
   contactPhone: {
     data: number;
     err: string;
   };
-  onContactPhone: (e: any) => void;
 }
 
 const ModalInputs = ({
   contactName,
   contactLastname,
   contactPhone,
-  onContactLastname,
-  onContactName,
-  onContactPhone,
+  handleChange,
+  handleChangePhone,
 }: IModalInputs) => {
   return (
     <>
       <input
         name="name"
         type="text"
+        id="name"
         required
         className="focus:outline-none placeholder:text-xs placeholder:leading-[20px] placeholder:font-[400] placeholder:text-[#67727E] bg-transparent p-[5px]"
         value={contactName}
-        onChange={(e) => onContactName(e)}
+        onChange={handleChange}
         placeholder="Nome.."
       />
       <input
         name="lastname"
         type="text"
+        id="lastname"
         required
         className="focus:outline-none placeholder:text-xs placeholder:leading-[20px] placeholder:font-[400] placeholder:text-[#67727E] bg-transparent p-[5px]"
         value={contactLastname}
-        onChange={(e) => onContactLastname(e)}
+        onChange={handleChange}
         placeholder="Cognome..."
       />
       <input
@@ -44,7 +44,7 @@ const ModalInputs = ({
         className="focus:outline-none placeholder:text-xs placeholder:leading-[20px] placeholder:font-[400] placeholder:text-[#67727E] bg-transparent p-[5px]"
         pattern="^\d{10}$"
         value={contactPhone.data}
-        onChange={(e) => onContactPhone(e)}
+        onChange={handleChangePhone}
         placeholder="Cellulare..."
         required
       />

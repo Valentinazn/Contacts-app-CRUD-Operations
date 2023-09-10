@@ -1,10 +1,8 @@
 import { useState } from "react";
-
 import axios from "axios";
-
 import UserDefaultImg from "/image/profile/userImg.svg";
 import { v4 as uuidv4 } from "uuid";
-import { useFetch } from "../../api";
+import { useFetch } from "../../hooks/useFetch";
 import { Profile } from "../../types/data.type";
 import AddButton from "../Buttons/AddButton";
 import Contact from "../Contact";
@@ -94,7 +92,6 @@ function Home({ text }: IHome) {
           ...i,
           img: img,
           name: name,
-
           lastname: lastname,
           phone: phone,
         };

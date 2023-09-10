@@ -6,7 +6,7 @@ import UserDefaultImg from "../../../src/assets/svg/userImg.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useFetch } from "../../api";
 import { Profile } from "../../types/data.type";
-import AddButton from "../AddButton";
+import AddButton from "../Buttons/AddButton";
 import Contact from "../Contact";
 import ModalDelete from "../../Modals/DeleteModal";
 import EditModal from "../../Modals/EditModal";
@@ -126,7 +126,7 @@ function Home({ text }: IHome) {
       id: id,
       lastname: "",
       name: "",
-      phone: 111,
+      phone: 0,
       img: "",
     });
     setDeleteModalOpen(true);

@@ -1,5 +1,5 @@
-import AddButton from "../../components/AddButton";
-import SubmitButton from "../../components/SubmitButton";
+import AddButton from "../../components/Buttons/AddButton";
+import SubmitButton from "../../components/Buttons/SubmitButton";
 import { Profile } from "../../types/data.type";
 import ModalContainer from "../ModalContainer";
 interface IModalDelete {
@@ -28,7 +28,7 @@ const ModalDelete = ({
         <h3 className="text-[24px]">{title}</h3>
         <div className="grid grid-cols-2 gap-5 content-end">
           <AddButton onClick={onClose} textButton={exitButtonText} />
-          <SubmitButton textButton={confirmButtonText} />
+          <SubmitButton textButton={confirmButtonText} bgColor="bg-red-700" />
         </div>
       </form>
     </ModalContainer>

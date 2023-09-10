@@ -1,4 +1,4 @@
-import AddIcon from "../../assets/svg/AddIcon";
+import AddIcon from "../../../assets/svg/AddIcon";
 
 interface IAddButton {
   onClick: (e: any) => void;

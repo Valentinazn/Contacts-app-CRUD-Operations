@@ -1,4 +1,4 @@
-import SubmitButton from "../../components/SubmitButton";
+import SubmitButton from "../../components/Buttons/SubmitButton";
 
 export interface IModalInputs {
   contactName: string;
@@ -52,7 +52,7 @@ const ModalInputs = ({
       <p className="text-[#ED6368] text-xs">
         {contactPhone.err ? `Err: Ci vogliono 10 caratteri numerici` : ""}
       </p>
-      <SubmitButton textButton={"Modifica"} />
+      <SubmitButton textButton={"Modifica"} bgColor="bg-[#4169e1]" />
     </>
   );
 };

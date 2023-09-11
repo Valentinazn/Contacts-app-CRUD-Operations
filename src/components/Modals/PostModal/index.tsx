@@ -1,12 +1,11 @@
-import CloseIcon from "../../assets/svg/CloseIcon";
-
 import "../style.css";
 import { IPostModal } from "../Modal.type";
 
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
-import SubmitButton from "../../components/Buttons/SubmitButton";
-import { useInput, useInputPhone } from "../../hooks/useInput";
+import { useInput, useInputPhone } from "../../../hooks/useInput";
+import CloseIcon from "../../../assets/svg/CloseIcon";
+import SubmitButton from "../../Buttons/SubmitButton";
 
 const PostModal = ({ onClose, onPostSubmit }: IPostModal) => {
   const { inputValue, handleChange } = useInput({ name: "", lastname: "" });

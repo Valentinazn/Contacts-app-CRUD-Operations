@@ -6,9 +6,9 @@ import { useFetch } from "../../hooks/useFetch";
 import { Profile } from "../../types/data.type";
 import AddButton from "../Buttons/AddButton";
 import Contact from "../Contact";
-import ModalDelete from "../../Modals/DeleteModal";
-import EditModal from "../../Modals/EditModal";
-import PostModal from "../../Modals/PostModal";
+import ModalDelete from "../Modals/DeleteModal";
+import EditModal from "../Modals/EditModal";
+import PostModal from "../Modals/PostModal";
 
 interface IHome {
   text: string;

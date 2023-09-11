@@ -25,5 +25,5 @@ Users should be able to:
 - Custom hooks
 - Axios
 - ReactJs
-- CSS Grid
+- Json server
 

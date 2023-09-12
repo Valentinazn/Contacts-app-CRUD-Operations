@@ -1,13 +1,12 @@
-import CloseIcon from "../../assets/svg/CloseIcon";
-
 import "../style.css";
 
 import { IEditModal } from "../Modal.type";
 
 import ModalContainer from "../ModalContainer";
 import ModalInputs from "../ModalInputs";
-import SubmitButton from "../../components/Buttons/SubmitButton";
-import { useInput, useInputPhone } from "../../hooks/useInput";
+import { useInput, useInputPhone } from "../../../hooks/useInput";
+import CloseIcon from "../../../assets/svg/CloseIcon";
+import SubmitButton from "../../Buttons/SubmitButton";
 
 const EditModal = ({ onClose, onEditSubmit, data }: IEditModal) => {
   const { inputValue, handleChange } = useInput({

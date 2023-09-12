@@ -1,6 +1,6 @@
-import CancelButton from "../../components/Buttons/CancelButton";
-import SubmitButton from "../../components/Buttons/SubmitButton";
-import { Profile } from "../../types/data.type";
+import { Profile } from "../../../types/data.type";
+import CancelButton from "../../Buttons/CancelButton";
+import SubmitButton from "../../Buttons/SubmitButton";
 import ModalContainer from "../ModalContainer";
 interface IModalDelete {
   title: string;

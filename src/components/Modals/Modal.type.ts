@@ -1,4 +1,4 @@
-import { Profile } from "../types/data.type";
+import { Profile } from "../../types/data.type";
 
 export interface IPostModal {
   onPostSubmit: (
